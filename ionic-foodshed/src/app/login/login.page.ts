@@ -47,8 +47,8 @@ export class LoginPage implements OnInit {
     let password: string = this.loginForm.value.password;
 
     // Check that both username and password are correct
-    if(username == correctUsername && password == correctPassword) {
-      this.router.navigate(['members']);
+    if (username === correctUsername && password == correctPassword) {
+      this.router.navigate(['tabs/members']);
     }
     else {
       alert("Username/Password is incorrect. Please try again.");

@@ -34,6 +34,10 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../fridges/fridges.module').then(m => m.FridgesPageModule)
+          }, {
+            path: 'fridge-info',
+            loadChildren: () =>
+              import('../fridge-info/fridge-info.module').then(m => m.FridgeInfoPageModule)
           }
         ]
       },
@@ -44,6 +48,16 @@ const routes: Routes = [
             path: '',
             loadChildren: () =>
               import('../login/login.module').then(m => m.LoginPageModule)
+          }
+        ]
+      },
+      {
+        path: 'members',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../members/members.module').then(m => m.MembersPageModule)
           }
         ]
       },
@@ -65,4 +79,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }
