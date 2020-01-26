@@ -28,20 +28,6 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'fridges',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../fridges/fridges.module').then(m => m.FridgesPageModule)
-          }, {
-            path: 'fridge-info',
-            loadChildren: () =>
-              import('../fridge-info/fridge-info.module').then(m => m.FridgeInfoPageModule)
-          }
-        ]
-      },
-      {
         path: 'login',
         children: [
           {
