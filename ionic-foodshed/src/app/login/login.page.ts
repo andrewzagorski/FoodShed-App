@@ -12,23 +12,23 @@ export class LoginPage implements OnInit {
 
   loginForm: FormGroup;
 
-  error_messages = {
-    'username': [
+  errorMessages = {
+    username: [
       { type: 'required', message: 'Username is required.' }
     ],
-    'password': [
+    password: [
       { type: 'required', message: 'Password is required.' }
     ],
-  }
+  };
 
   constructor(
     public formBuilder: FormBuilder, public router: Router, public localStorage: LocalstorageService
   ) {
     this.loginForm = this.formBuilder.group({
-      password: new FormControl("", Validators.compose([
+      password: new FormControl('', Validators.compose([
         Validators.required
       ])),
-      username: new FormControl("", Validators.compose([
+      username: new FormControl('', Validators.compose([
         Validators.required
       ]))
     });
@@ -38,22 +38,21 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    let correctUsername: string = "foodshed";
-    let correctPassword: string = "randompass";
+    const correctUsername = 'foodshed';
+    const correctPassword = 'randompass';
 
     console.log('username: ', this.loginForm.value.username);
     console.log('password: ', this.loginForm.value.password);
 
-    let username: string = this.loginForm.value.username;
-    let password: string = this.loginForm.value.password;
+    const username: string = this.loginForm.value.username;
+    const password: string = this.loginForm.value.password;
     this.localStorage.log(username, password); // test custom service
 
     // Check that both username and password are correct
     if (username === correctUsername && password === correctPassword) {
       this.router.navigate(['tabs/members']);
-    }
-    else {
-      alert("Username/Password is incorrect. Please try again.");
+    } else {
+      alert('Username/Password is incorrect. Please try again.');
     }
   }
 
