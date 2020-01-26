@@ -38,6 +38,16 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'fridges',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../fridges/fridges.module').then(m => m.FridgesPageModule)
+          }
+        ]
+      },
+      {
         path: 'members',
         children: [
           {
