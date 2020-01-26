@@ -62,6 +62,12 @@ export class MapPage implements OnInit {
         .setHTML("<h1>Student Activity Center: 333 East Campus Mall, Room 4301 </h1>")
         .setMaxWidth("300px")
         .addTo(this.map);
+        const popup2 = new mapboxgl.Popup({offset: popupOffsets})
+        .setLngLat([-89.412213, 43.074975])
+        .setHTML("<h1>Moore Hall: 2nd Floor 1575 Linden Drive #371 </h1>")
+        .setMaxWidth("300px")
+        .addTo(this.map);
+      }
     })
 
   }
