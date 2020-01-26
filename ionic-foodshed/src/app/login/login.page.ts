@@ -43,13 +43,13 @@ export class LoginPage implements OnInit {
 
     console.log('username: ', this.loginForm.value.username);
     console.log('password: ', this.loginForm.value.password);
-    // this.localStorage.helloWorld(); // testing custom service
 
     let username: string = this.loginForm.value.username;
     let password: string = this.loginForm.value.password;
+    this.localStorage.log(username, password); // test custom service
 
     // Check that both username and password are correct
-    if (username === correctUsername && password == correctPassword) {
+    if (username === correctUsername && password === correctPassword) {
       this.router.navigate(['tabs/members']);
     }
     else {
