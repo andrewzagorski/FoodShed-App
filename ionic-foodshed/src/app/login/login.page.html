@@ -14,7 +14,7 @@
     </div>
 
     <ion-item>
-      <ion-input formControlName="password" placeholder="Password" type="password"></ion-input>
+      <ion-input formControlName="password" placeholder="Password" type="password" (keyup.enter)="login()"></ion-input>
     </ion-item>
 
     <div class="error-messages">
