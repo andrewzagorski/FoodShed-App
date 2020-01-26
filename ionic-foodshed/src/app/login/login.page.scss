@@ -1,0 +1,20 @@
+.page-login {
+    ion-title * {
+        margin-top: 30vh;
+        margin-bottom: 5vh;
+        padding: 160px 20px;
+        display:block;
+    }
+    ion-list * {
+        margin-top: 30vh;
+        margin-bottom: 5vh;
+        padding: 160px 20px;
+        display: block;
+    }
+}
+
+.error-messages {
+    font-size: 0.7en;
+    color: red;
+    text-align: center;
+}
