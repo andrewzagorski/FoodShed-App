@@ -39,7 +39,30 @@ export class MapPage implements OnInit {
     var marker2 = new mapboxgl.Marker()
       .setLngLat([-89.398564, 43.072439])
       .addTo(this.map);  
+    
+    var markerHeight = 50, markerRadius = 1, linearOffset = 1;
+    var popupOffsets = {
+    'top': [0, 0],
+    'top-left': [0,0],
+    'top-right': [0,0],
+    'bottom': [0, -markerHeight],
+    'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+    'left': [markerRadius, (markerHeight - markerRadius) * -1],
+    'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+    };
 
+    //need to figure out how to only open when marker is clicked
+
+    this.map.on('click', marker=>{
+      const result = this.map.queryRenderedFeatures({object: marker})
+      if (result.length){
+        const popup = new mapboxgl.Popup({offset: popupOffsets})
+        .setLngLat([-89.398564, 43.072439])
+        .setHTML("<h1>Student Activity Center: 333 East Campus Mall, Room 4301 </h1>")
+        .setMaxWidth("300px")
+        .addTo(this.map);
+    })
 
   }
 
