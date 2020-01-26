@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LocalstorageService } from '../localstorage.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ export class LoginPage implements OnInit {
   }
 
   constructor(
-    public formBuilder: FormBuilder, public router: Router
+    public formBuilder: FormBuilder, public router: Router, public localStorage: LocalstorageService
   ) {
     this.loginForm = this.formBuilder.group({
       password: new FormControl("", Validators.compose([
@@ -42,6 +43,7 @@ export class LoginPage implements OnInit {
 
     console.log('username: ', this.loginForm.value.username);
     console.log('password: ', this.loginForm.value.password);
+    // this.localStorage.helloWorld(); // testing custom service
 
     let username: string = this.loginForm.value.username;
     let password: string = this.loginForm.value.password;

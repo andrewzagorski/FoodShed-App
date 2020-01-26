@@ -15,6 +15,7 @@ import { Camera } from '@ionic-native/Camera/ngx';
 import { File } from '@ionic-native/File/ngx';
 import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
+import { LocalstorageService } from './localstorage.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +25,11 @@ import { FilePath } from '@ionic-native/file-path/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
-    Camera, File, WebView, FilePath
+    Camera,
+    File,
+    WebView,
+    FilePath,
+    LocalstorageService
   ],
   bootstrap: [AppComponent]
 })
