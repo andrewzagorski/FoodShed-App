@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "477287724435",
+    "firebase_url": "https://foodshed-4e77f.firebaseio.com",
+    "project_id": "foodshed-4e77f",
+    "storage_bucket": "foodshed-4e77f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477287724435:android:870bc4c9c268545bad6466",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477287724435-rs0nhofugtun6k10bot0v23msc20c0hr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIS_8DtoTo_jqEL3R6qJmberu-mHo6nUA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477287724435-rs0nhofugtun6k10bot0v23msc20c0hr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
