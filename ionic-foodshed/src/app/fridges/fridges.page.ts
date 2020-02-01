@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalstorageService } from '../localstorage.service';
 
-import { AlertController } from '@ionic/angular';
-
 @Component({
   selector: 'app-fridges',
   templateUrl: './fridges.page.html',
@@ -10,20 +8,9 @@ import { AlertController } from '@ionic/angular';
 })
 export class FridgesPage implements OnInit {
 
-  constructor(private localStorage: LocalstorageService, public alertController: AlertController) { }
+  constructor(private localStorage: LocalstorageService) { }
 
   ngOnInit() {
-  }
-
-  async presentAlert() {
-    const alert = await this.alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
-      buttons: ['OK']
-    });
-
-    await alert.present();
   }
 
   temp() {

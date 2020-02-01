@@ -17,6 +17,7 @@ import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { FilePath } from '@ionic-native/file-path/ngx';
 import { LocalstorageService } from './localstorage.service';
 import { HTTP } from '@ionic-native/http/ngx';
+import { NotificationsService } from './notifications.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +34,8 @@ import { HTTP } from '@ionic-native/http/ngx';
     WebView,
     FilePath,
     LocalstorageService,
-    HTTP
+    HTTP,
+    NotificationsService
   ],
   bootstrap: [AppComponent]
 })
