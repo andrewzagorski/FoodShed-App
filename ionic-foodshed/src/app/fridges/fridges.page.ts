@@ -13,8 +13,4 @@ export class FridgesPage implements OnInit {
   ngOnInit() {
   }
 
-  temp() {
-    this.localStorage.helloWorld();
-  }
-
 }
