@@ -55,5 +55,4 @@ export class LoginPage implements OnInit {
       alert('Username/Password is incorrect. Please try again.');
     }
   }
-
 }

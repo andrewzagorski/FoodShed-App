@@ -35,6 +35,7 @@ export class MapPage implements OnInit {
     var marker = new mapboxgl.Marker()
       .setLngLat([-89.412213, 43.074975])
       .addTo(this.map);
+<<<<<<< HEAD
 
     var marker2 = new mapboxgl.Marker()
       .setLngLat([-89.398564, 43.072439])
@@ -70,7 +71,8 @@ export class MapPage implements OnInit {
       }
     })
 
+=======
+>>>>>>> add service. add http plugins
   }
-
   ngOnInit() { }
 }
