@@ -38,8 +38,8 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const correctUsername = 'foodshed';
-    const correctPassword = 'randompass';
+    const correctUsername = 'username';
+    const correctPassword = 'password';
 
     console.log('username: ', this.loginForm.value.username);
     console.log('password: ', this.loginForm.value.password);
@@ -55,5 +55,4 @@ export class LoginPage implements OnInit {
       alert('Username/Password is incorrect. Please try again.');
     }
   }
-
 }

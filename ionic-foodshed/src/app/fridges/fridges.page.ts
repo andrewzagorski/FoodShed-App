@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalstorageService } from '../localstorage.service';
 
 @Component({
   selector: 'app-fridges',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FridgesPage implements OnInit {
 
-  constructor() { }
+  constructor(private localStorage: LocalstorageService) { }
 
   ngOnInit() {
   }

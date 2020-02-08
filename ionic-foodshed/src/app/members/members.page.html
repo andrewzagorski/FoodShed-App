@@ -1,46 +1,137 @@
 <ion-content>
-  <h2> Fridge 1 </h2>
-  <p id="status1">Status: </p>
-  <tr>
-    <td><img [src]="fridge1" alt="Fridge 1" style="width:275px;height:200px"></td>
-    <td style="vertical-align: middle;">
-      <div>
-        <ion-button style="float: right" (click)="updatePicture(1)" expand="round" size="small">Update Photo</ion-button>
-        <ion-button style="float: right" (click)="updateStatus(1)" expand="round" size="small">Update Status</ion-button>
-      </div>
-    </td>  
-  </tr>
-  <h2> Fridge 2 </h2>
-  <p>Status: </p>
-  <tr>
-    <td><img [src]="fridge2" alt="Fridge 2" style="width:275px;height:200px"></td>
-    <td style="vertical-align: middle;">
-      <div>
-        <ion-button style="float: right" (click)="updatePicture(2)" expand="round" size="small">Update Photo</ion-button>
-        <ion-button style="float: right" (click)="updateStatus(2)" expand="round" size="small">Update Status</ion-button>
-      </div>
-    </td>  
-  </tr>
-  <h2> Fridge 3 </h2>
-  <p>Status: </p>
-  <tr>
-    <td><img [src]="fridge3" alt="Fridge 3" style="width:275px;height:200px"></td>
-    <td style="vertical-align: middle;">
-      <div>
-        <ion-button style="float: right" (click)="updatePicture(3)" expand="round" size="small">Update Photo</ion-button>
-        <ion-button style="float: right" (click)="updateStatus(3)" expand="round" size="small">Update Status</ion-button>
-      </div>
-    </td>  
-  </tr>
-  <h2> Fridge 4 </h2>
-  <p>Status: </p>
-  <tr>
-    <td><img [src]="fridge4" alt="Fridge 4" style="width:275px;height:200px"></td>
-    <td style="vertical-align: middle;">
-      <div>
-        <ion-button style="float: right" (click)="updatePicture(4)" expand="round" size="small">Update Photo</ion-button>
-        <ion-button style="float: right" (click)="updateStatus(4)" expand="round" size="small">Update Status</ion-button>
-      </div>
-    </td>  
-  </tr>
+  <ion-card>
+    <ion-card-header>Fridge 1</ion-card-header>
+    <ion-card-content
+      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              [src]="fridge1"
+              alt="Fridge 1"
+              style="width:275px;height:200px"
+            />
+          </ion-col>
+          <ion-col>
+            <ion-button
+              style="float: right"
+              (click)="updatePicture(1)"
+              expand="round"
+              size="small"
+              >Update Photo</ion-button
+            >
+            <ion-button
+              style="float: right"
+              (click)="updateStatus(1)"
+              expand="round"
+              size="small"
+              >Update Status</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Fridge 2</ion-card-header>
+    <ion-card-content
+      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              [src]="fridge2"
+              alt="Fridge 2"
+              style="width:275px;height:200px"
+            />
+          </ion-col>
+          <ion-col>
+            <ion-button
+              style="float: right"
+              (click)="updatePicture(2)"
+              expand="round"
+              size="small"
+              >Update Photo</ion-button
+            >
+            <ion-button
+              style="float: right"
+              (click)="updateStatus(2)"
+              expand="round"
+              size="small"
+              >Update Status</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Fridge 3</ion-card-header>
+    <ion-card-content
+      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              [src]="fridge3"
+              alt="Fridge 3"
+              style="width:275px;height:200px"
+            />
+          </ion-col>
+          <ion-col>
+            <ion-button
+              style="float: right"
+              (click)="updatePicture(3)"
+              expand="round"
+              size="small"
+              >Update Photo</ion-button
+            >
+            <ion-button
+              style="float: right"
+              (click)="updateStatus(3)"
+              expand="round"
+              size="small"
+              >Update Status</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Fridge 4</ion-card-header>
+    <ion-card-content
+      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <img
+              [src]="fridge4"
+              alt="Fridge 4"
+              style="width:275px;height:200px"
+            />
+          </ion-col>
+          <ion-col>
+            <ion-button
+              style="float: right"
+              (click)="updatePicture(4)"
+              expand="round"
+              size="small"
+              >Update Photo</ion-button
+            >
+            <ion-button
+              style="float: right"
+              (click)="updateStatus(4)"
+              expand="round"
+              size="small"
+              >Update Status</ion-button
+            >
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
