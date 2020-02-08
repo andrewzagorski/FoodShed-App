@@ -13,4 +13,8 @@ export class FridgesPage implements OnInit {
   ngOnInit() {
   }
 
+  test() {
+    console.log("hi");
+  }
+
 }

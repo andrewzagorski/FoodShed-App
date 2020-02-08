@@ -30,7 +30,8 @@ export class MembersPage implements OnInit {
 
   // images = [];
 
-  constructor(private camera: Camera, private file: File, private webview: WebView, private actionSheetController: ActionSheetController, private toastController: ToastController, private storage: Storage, private plt: Platform, private loadingController: LoadingController, private ref: ChangeDetectorRef, private filePath: FilePath) { }
+  constructor(private camera: Camera, private file: File, private webview: WebView, private actionSheetController: ActionSheetController,
+    private toastController: ToastController, private storage: Storage, private plt: Platform, private loadingController: LoadingController, private ref: ChangeDetectorRef, private filePath: FilePath) { }
 
   ngOnInit() {
   }
