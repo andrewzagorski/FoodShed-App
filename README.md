@@ -6,7 +6,7 @@ For FoodShed Members:
 To change username/password, go to login.page.ts and modify the
 correctUsername/correctPassword variables.
 
-plugins to install for services:
+## plugins to install for services:
 
 https://ionicframework.com/docs/native/local-notifications
 ionic cordova plugin add cordova-plugin-local-notification
