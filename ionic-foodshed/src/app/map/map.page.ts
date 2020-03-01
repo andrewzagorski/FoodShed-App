@@ -9,18 +9,15 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
   styleUrls: ['./map.page.scss'],
 })
 export class MapPage implements OnInit {
-  markers: any[];
-  map: any;
-  constructor() {
-    this.markers = []; // TODO: initialize array of markers
+  ngOnInit(): void {
   }
+  map: any;
   ionViewDidEnter() { // run when app is opened
     /*Initializing Map*/
     // tslint:disable-next-line: max-line-length
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYWVjaGFuIiwiYSI6ImNqbXd4ZmYzYTA0eWcza3J0NzVsNnNkcWoifQ.PQuBcFIs9STCQ6uf8DrJNw'; // token from previous group
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWx6YWdvcnNraSIsImEiOiJjazJtZXF3MTEwaDdsM25sa2VzMG9nbHl0In0.CYoRFT7bS-EpX4l17qro-Q'; // token from previous group
     this.map = new mapboxgl.Map({ // initialize new map object
-      style: 'mapbox://styles/aechan/cjmwxodn95lir2rmoq60ydb3m', // style defined by previous group
-      // center: [-89.4125, 43.0766], // center lat and longitude
+      style: 'mapbox://styles/alzagorski/ck6e0ghjy0q7n1io965s0ln07', // style defined by previous group
       center: [-89.405424, 43.073862], // adjusted center lat and longitude
       zoom: 15,
       pitch: 0,
@@ -28,47 +25,33 @@ export class MapPage implements OnInit {
       maxZoom: 18,
       container: 'map'
     });
-    // add a single marker
-    // var marker = new mapboxgl.Marker()
-    //  .setLngLat([-89.4125, 43.0766])
-    //  .addTo(this.map);
-    var marker = new mapboxgl.Marker()
-      .setLngLat([-89.412213, 43.074975])
-      .addTo(this.map);
+    this.map.on('click', 'fridges', e => {
 
-    var marker2 = new mapboxgl.Marker()
-      .setLngLat([-89.398564, 43.072439])
-      .addTo(this.map);
+      var features = e.features;
 
+      if (!features.length) {
+        return;
+      }
+
+      var feature = features[0];
+
+      const popup = new mapboxgl.Popup({ offset: popupOffsets })
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<h3>' + feature.properties.title + '</h3><p>' + feature.properties.description + '</p>')
+        .setMaxWidth("250px")
+        .addTo(this.map);
+    });
     var markerHeight = 50, markerRadius = 1, linearOffset = 1;
     var popupOffsets = {
-      top: [0, 0],
+      'top': [0, 0],
       'top-left': [0, 0],
       'top-right': [0, 0],
-      bottom: [0, -markerHeight],
+      'bottom': [0, -markerHeight],
       'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
       'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-      left: [markerRadius, (markerHeight - markerRadius) * -1],
-      right: [-markerRadius, (markerHeight - markerRadius) * -1]
+      'left': [markerRadius, (markerHeight - markerRadius) * -1],
+      'right': [-markerRadius, (markerHeight - markerRadius) * -1]
     };
 
-    // need to figure out how to only open when marker is clicked
-
-    this.map.on('click', (marker: any) => {
-      const result = this.map.queryRenderedFeatures({ object: marker })
-      if (result.length) {
-        const popup = new mapboxgl.Popup({ offset: popupOffsets })
-          .setLngLat([-89.398564, 43.072439])
-          .setHTML('<h1>Student Activity Center: 333 East Campus Mall, Room 4301 </h1>')
-          .setMaxWidth('300px')
-          .addTo(this.map);
-        const popup2 = new mapboxgl.Popup({ offset: popupOffsets })
-          .setLngLat([-89.412213, 43.074975])
-          .setHTML('<h1>Moore Hall: 2nd Floor 1575 Linden Drive #371 </h1>')
-          .setMaxWidth('300px')
-          .addTo(this.map);
-      }
-    });
   }
-  ngOnInit() { }
 }
