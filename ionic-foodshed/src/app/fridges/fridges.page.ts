@@ -8,7 +8,11 @@ import { LocalstorageService } from '../localstorage.service';
 })
 export class FridgesPage implements OnInit {
 
-  constructor(private localStorage: LocalstorageService) { }
+  items: any;
+
+  constructor(private localStorage: LocalstorageService) {
+    this.items = ['Fridge 1', 'Fridge 2', 'Fridge 3', 'Fridge 4'];
+  }
 
   ngOnInit() {
   }
