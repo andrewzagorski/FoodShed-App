@@ -172,18 +172,20 @@ export class MembersPage implements OnInit {
 
   async selectStatus() {
     const actionSheet = await this.actionSheetController.create({
-      header: "Fridge is...",
+      header: 'Fridge is...',
       buttons: [{
         text: 'Full',
         handler: () => {
-          this.changeStatus("Full");
+          this.changeStatus('Full');
+          // console.log('update fridge status to full');
           // present send notification option
         }
       },
       {
         text: 'Empty',
         handler: () => {
-          this.changeStatus("Empty");
+          this.changeStatus('Empty');
+          // console.log('update fridge status to empty');
           // present send notification option
         }
       },
@@ -199,12 +201,24 @@ export class MembersPage implements OnInit {
   changeStatus(newStatus: string) {
     if (this.fridgeNum === 1) {
       this.status1 = newStatus;
+      console.log('fridge 1 is now ' + newStatus);
+      // change database for fridge 1
+      // send notification for fridge 1
     } else if (this.fridgeNum === 2) {
       this.status2 = newStatus;
+      console.log('fridge 2 is now ' + newStatus);
+      // change database for fridge 2
+      // send notification for fridge 2
     } else if (this.fridgeNum === 3) {
       this.status3 = newStatus;
+      console.log('fridge 3 is now ' + newStatus);
+      // change database for fridge 3
+      // send notification for fridge 3
     } else if (this.fridgeNum === 4) {
       this.status4 = newStatus;
+      console.log('fridge 4 is now ' + newStatus);
+      // change database for fridge 4
+      // send notification for fridge 4
     }
   }
 
