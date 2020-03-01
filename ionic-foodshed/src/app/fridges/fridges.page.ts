@@ -13,8 +13,8 @@ export class FridgesPage implements OnInit {
   ngOnInit() {
   }
 
-  test() {
-    console.log("hi");
+  printInfo(fridgeNum: number) {
+    console.log('fridge ' + fridgeNum + ' info');
   }
 
 }
