@@ -1,31 +1,33 @@
 <ion-content>
   <ion-card>
-    <ion-card-header>Fridge 1</ion-card-header>
-    <ion-card-content
-      ><ion-card-subtitle>Status:</ion-card-subtitle>
+    <ion-card-header style="text-align:center;font-size: 150%;"><b>Fridge 1</b></ion-card-header>
+    <ion-card-content>
+      <ion-card-subtitle style="text-align:center;">Status: {{status1}}</ion-card-subtitle>
       <ion-grid>
         <ion-row>
           <ion-col>
             <img
               [src]="fridge1"
               alt="Fridge 1"
+              style="margin-left: 40px; width:150px;height:200px"
             />
           </ion-col>
-          <ion-col>
+          
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align:center;">
             <ion-button
-              style="float: right"
               (click)="updatePicture(1)"
               expand="round"
-              size="small"
-              >Update Photo</ion-button
-            >
+              size="small">
+              Update Photo
+            </ion-button>
             <ion-button
-              style="float: right"
               (click)="updateStatus(1)"
               expand="round"
-              size="small"
-              >Update Status</ion-button
-            >
+              size="small">
+              Update Status
+            </ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -33,27 +35,29 @@
   </ion-card>
 
   <ion-card>
-    <ion-card-header>Fridge 2</ion-card-header>
+    <ion-card-header style="text-align:center;font-size: 150%;"><b>Fridge 2</b></ion-card-header>
     <ion-card-content
-      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      ><ion-card-subtitle style="text-align:center;">Status: {{status2}}</ion-card-subtitle>
       <ion-grid>
         <ion-row>
           <ion-col>
             <img
               [src]="fridge2"
               alt="Fridge 2"
+              style="margin-left: 40px; width:150px;height:200px"
             />
           </ion-col>
-          <ion-col>
+          
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align:center;">
             <ion-button
-              style="float: right"
               (click)="updatePicture(2)"
               expand="round"
               size="small"
               >Update Photo</ion-button
             >
             <ion-button
-              style="float: right"
               (click)="updateStatus(2)"
               expand="round"
               size="small"
@@ -66,27 +70,29 @@
   </ion-card>
 
   <ion-card>
-    <ion-card-header>Fridge 3</ion-card-header>
+    <ion-card-header style="text-align:center;font-size: 150%;"><b>Fridge 3</b></ion-card-header>
     <ion-card-content
-      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      ><ion-card-subtitle style="text-align:center;">Status: {{status3}}</ion-card-subtitle>
       <ion-grid>
         <ion-row>
           <ion-col>
             <img
               [src]="fridge3"
               alt="Fridge 3"
+              style="margin-left: 40px; width:150px;height:200px"
             />
           </ion-col>
-          <ion-col>
+          
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align:center;">
             <ion-button
-              style="float: right"
               (click)="updatePicture(3)"
               expand="round"
               size="small"
               >Update Photo</ion-button
             >
             <ion-button
-              style="float: right"
               (click)="updateStatus(3)"
               expand="round"
               size="small"
@@ -99,27 +105,29 @@
   </ion-card>
 
   <ion-card>
-    <ion-card-header>Fridge 4</ion-card-header>
+    <ion-card-header style="text-align:center;font-size: 150%;"><b>Fridge 4</b></ion-card-header>
     <ion-card-content
-      ><ion-card-subtitle>Status:</ion-card-subtitle>
+      ><ion-card-subtitle style="text-align:center;">Status: {{status4}}</ion-card-subtitle>
       <ion-grid>
         <ion-row>
           <ion-col>
             <img
               [src]="fridge4"
               alt="Fridge 4"
+              style="margin-left: 40px; width:150px;height:200px"
             />
           </ion-col>
-          <ion-col>
+          
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align:center;">
             <ion-button
-              style="float: right"
               (click)="updatePicture(4)"
               expand="round"
               size="small"
               >Update Photo</ion-button
             >
             <ion-button
-              style="float: right"
               (click)="updateStatus(4)"
               expand="round"
               size="small"
