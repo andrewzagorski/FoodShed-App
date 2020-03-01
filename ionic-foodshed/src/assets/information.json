@@ -1,0 +1,34 @@
+{
+    "fridges": [
+        {
+            "location": "Student Activity Center: 333 East Campus Mall, Room 4301",
+            "status": "full",
+            "hours": "closed"
+        },
+        {
+            "location": "Moore Hall: 2nd Floor 1575 Linden Drive #371",
+            "status": "full",
+            "hours": "closed"
+        },
+        {
+            "location": "Fridge 3",
+            "status": "full",
+            "hours": "closed"
+        },
+        {
+            "location": "Fridge 4",
+            "status": "full",
+            "hours": "closed"
+        },
+        {
+            "location": "Fridge 5",
+            "status": "full",
+            "hours": "closed"
+        },
+        {
+            "location": "Fridge 6",
+            "status": "full",
+            "hours": "closed"
+        }
+    ]
+}
