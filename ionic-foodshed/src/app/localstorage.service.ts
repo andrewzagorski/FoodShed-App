@@ -56,6 +56,45 @@ export class LocalstorageService {
       });
   }
 
+  formatDate(key) {
+    const date = [];
+    date[0] = key.substring(4).split(' ')[0].split('-');
+    date[1] = key.substring(4).split(' ')[1].split(':');
+    return date;
+  }
+
+  // store a value
+  store() {
+    const selectedDate = new Date().toISOString();
+    console.log(selectedDate);
+    this.storage.set(selectedDate, {
+      name: 'Avery',
+      age: 18
+    });
+  }
+
+  //
+  printStored() {
+    console.log('====');
+    this.storage.forEach((value, key) => {
+      console.log('key: ' + key + ' value: ' + value);
+    });
+  }
+
+  // remove a single key value:
+  remove(key: string) {
+    this.storage.remove(key);
+  }
+
+  //  delete all data from your application:
+  clear() {
+    this.storage.clear();
+  }
+
+  quickfix() {
+    return this.storage;
+  }
+
   log(name: string, value: string) {
     this.storage.set(name, value);
   }
