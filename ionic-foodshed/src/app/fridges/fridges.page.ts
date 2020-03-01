@@ -16,5 +16,4 @@ export class FridgesPage implements OnInit {
   printInfo(fridgeNum: number) {
     console.log('fridge ' + fridgeNum + ' info');
   }
-
 }
